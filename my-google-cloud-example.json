@@ -1,0 +1,21 @@
+{
+  "builders": [
+    {
+      "type": "googlecompute",
+      "account_file": "account.json",
+      "project_id": "firstkubernetes-176201",
+      "source_image": "ubuntu-1804-bionic-v20190918",
+      "ssh_username": "packer",
+      "zone": "europe-west2-b",
+      "image_description": "Codefresh example with Packer",
+      "image_name": "codefresh-simple-ubuntu-vm"
+    }
+  ],
+  "provisioners": [
+      {
+        "type": "file",
+        "source": "sample",
+        "destination": "sample"
+      }
+  ]  
+}
